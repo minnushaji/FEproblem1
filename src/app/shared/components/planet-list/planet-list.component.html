@@ -1,0 +1,88 @@
+<div [formGroup]="planetList" fxLayout="row" fxLayoutAlign="space-around center">
+    <div fxLayout="column" fxLayoutAlign="space-around center">
+        <mat-form-field appearance="fill">
+            <mat-label>Select Planets</mat-label>
+            <mat-select formControlName="selectedFirstPlanet" (selectionChange)="updateVehicleList(planetList.value.selectedFirstPlanet)">
+                <mat-option *ngFor="let item of planets" [value]="item">{{item.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div *ngIf="planetList.value.selectedFirstPlanet">
+            <p>You selected {{planetList.value.selectedFirstPlanet.name}}</p>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Select Vehicles</mat-label>
+                <mat-select formControlName="selectedFirstVehicle" (selectionChange)="updateVehicleList(planetList.value.selectedFirstPlanet)">
+                    <mat-option *ngFor="let item of vehicles" [value]="item">{{item.name}} {{item.total_no}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <p>You selected {{planetList.value.selectedFirstVehicle.name}}</p>
+        </div>
+    </div>
+
+    <!-- <div fxLayout="column" fxLayoutAlign="space-around center">
+    <mat-form-field appearance="fill">
+        <mat-label>Select</mat-label>
+        <mat-select formControlName="selectedSecondPlanet" (selectionChange)="updateList($event)">
+            <mat-option *ngFor="let item of planets" [value]="item">{{item.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div *ngIf="planetList.value.selectedSecondPlanet">
+        <p>You selected {{planetList.value.selectedSecondPlanet.name}}</p>
+        <mat-form-field appearance="fill">
+            <mat-label>Select Vehicles</mat-label>
+            <mat-select formControlName="selectedSecondVehicle" (selectionChange)="updateList($event)">
+                <mat-option *ngFor="let item of vehiclesList" [value]="item">{{item.name}} {{item.total_no}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </div>
+</div>
+
+<div fxLayout="column" fxLayoutAlign="space-around center">
+    <mat-form-field appearance="fill">
+        <mat-label>Select</mat-label>
+        <mat-select formControlName="selectedThirdPlanet" (selectionChange)="updateList($event)">
+            <mat-option *ngFor="let item of planets" [value]="item">{{item.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div *ngIf="planetList.value.selectedThirdPlanet">
+        <p>You selected {{planetList.value.selectedThirdPlanet.name}}</p>
+        <mat-form-field appearance="fill">
+            <mat-label>Select Vehicles</mat-label>
+            <mat-select formControlName="selectedThirdVehicle" (selectionChange)="updateList($event)">
+                <mat-option *ngFor="let item of vehiclesList" [value]="item">{{item.name}} {{item.total_no}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </div>
+</div>
+
+
+<div fxLayout="column" fxLayoutAlign="space-around center">
+    <mat-form-field appearance="fill">
+        <mat-label>Select</mat-label>
+        <mat-select formControlName="selectedFourthPlanet" (selectionChange)="updateList($event)">
+            <mat-option *ngFor="let item of planets" [value]="item">{{item.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div *ngIf="planetList.value.selectedFourthPlanet">
+        <p>You selected {{planetList.value.selectedFourthPlanet.name}}</p>
+        <mat-form-field appearance="fill">
+            <mat-label>Select Vehicles</mat-label>
+            <mat-select formControlName="selectedFourthVehicle" (selectionChange)="updateList($event)">
+                <mat-option *ngFor="let item of vehiclesList" [value]="item">{{item.name}} {{item.total_no}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </div>
+</div> -->
+
+</div>

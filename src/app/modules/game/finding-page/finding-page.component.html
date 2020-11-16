@@ -1,0 +1,18 @@
+<div fxLayout="row" fxLayoutAlign="space-around center">
+    <app-planet-list [planets]="planetList" [vehicles]="vehicleList" [selectedvehicles]="selectedvehicles" (messageEvent)="receiveMessage($event)"></app-planet-list>
+    <app-planet-list [planets]="planetList" [vehicles]="vehicleList" [selectedvehicles]="selectedvehicles" (messageEvent)="receiveMessage($event)"></app-planet-list>
+    <app-planet-list [planets]="planetList" [vehicles]="vehicleList" [selectedvehicles]="selectedvehicles" (messageEvent)="receiveMessage($event)"></app-planet-list>
+    <app-planet-list [planets]="planetList" [vehicles]="vehicleList" [selectedvehicles]="selectedvehicles" (messageEvent)="receiveMessage($event)"></app-planet-list>
+</div>
+
+
+
+<div *ngIf="totalSpeed > 0">
+    Time Taken : {{totalTime}}
+</div>
+
+
+<div><button mat-icon-button class="example-icon" (click)="checkResult()" aria-label="Example icon-button with menu icon"> Click to Find Falcone! </button></div>
+<div>
+    {{result}}
+</div>
