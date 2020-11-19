@@ -34,7 +34,7 @@ export class HttpService {
 
   postRequest(reqUrl: string, params?: any): Observable<any> {
     var endpoint = this.endpoint + '/' + reqUrl
-    return this.http.post(endpoint, { 'params': params })
+    return this.http.post(endpoint, params)
       .pipe(
         catchError(error => {
           let errorMsg: string;

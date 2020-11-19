@@ -68,7 +68,7 @@ export class FindingPageComponent implements OnInit {
     this.searchDataService.getGameToken('token')
       .then((data: any) => {
         this.token = data;
-        sessionStorage.setItem('token', this.token)
+        sessionStorage.setItem('token', this.token.token)
       });
 
   }
@@ -83,6 +83,7 @@ export class FindingPageComponent implements OnInit {
       }
     });
     var token = sessionStorage.getItem('token')
+    console.log('tokee ',token)
 
     var request = {
       token: token,

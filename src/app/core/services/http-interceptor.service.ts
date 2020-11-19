@@ -18,14 +18,15 @@ export class HttpInterceptorService implements HttpInterceptor {
       var token = sessionStorage.getItem('token')
       req = req.clone({
         setHeaders: {
-          'token': token,
-          'Content-Type': 'application/json'
+          // 'token': token,
+          'Accept': 'application/json',
+          'Content-Type' :'application/json '
         }
       });
     } else {
       req = req.clone({
         setHeaders: {
-          'Content-Type': 'application/json'
+          'Accept': 'application/json'
         }
       });
     }
